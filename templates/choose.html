@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{super()}}
+    <title>Введіть дату</title>
+{% endblock %}
+ 
+{% block content %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Офіційний курс гривні щодо іноземних валют</h1>   
+</div>
+<div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0 w-50 " >
+    <form class="container " method="post" >
+
+        <div class="row align-items-center">
+            <div class="col-sm-3">
+                <p class="fs-5 text-muted ">Станом на</p>
+            </div>
+            <div class="col">
+                <input  type="text" name="dateform"  class="form-control" placeholder="Дата" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="col w-50">
+                <button class="input-group-text" type="submit" id="basic-addon1">Ок</button>
+            </div>
+          </div>
+      
+  </form>
+</div>
+{% endblock %}

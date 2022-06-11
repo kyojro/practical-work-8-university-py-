@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{super()}}
+    <title>Home</title>
+{% endblock %}
+
+{% block content %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fs-3 fw-normal">Офіційний курс гривні щодо іноземних валют</h1>
+    <div class="col justify-content-center text-center align-items-center">
+        <a class="me-3 py-2 row text-center fw-bold text-dark text-decoration-none" href="/Currency">Курс валют на сьогодні</a>
+        <a class= "me-3 py-2 row align-items-center fw-bold text-dark text-decoration-none" href="/Currency/Choose">Курс валют за датою</a>
+        <a class="me-3 py-2 row align-items-center fw-bold text-dark text-decoration-none" href="/Registration">Реєстрація</a>
+    </div>
+</div>
+{% endblock %}

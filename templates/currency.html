@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{super()}}
+<title>Курс валют на сьогодні</title>
+{% endblock %}
+
+{% block content %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <h1 class="display-4 fw-normal">Офіційний курс гривні щодо іноземних валют</h1>
+  <p class="fs-5 text-muted">Станом на {{data[0].exchangedate}}</p>
+</div>
+
+<table class="table">
+    <thead class="thead-inverse table-responsive">
+      <tr>
+        <th>#</th>
+        <th>Код</th>
+        <th>Назва</th>
+        <th>Курс</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {% for item in data %}
+      <tr>
+        <th scope="row">{{data.index(item)+1}}</th>
+        <td>{{item.cc}}</td>
+        <td>{{item.txt}}</td>
+        <td>{{item.rate}}</td>
+      </tr>
+      {% endfor %}
+        
+      
+     </tbody>
+  </table>
+  
+  
+{% endblock %}
